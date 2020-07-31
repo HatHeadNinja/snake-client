@@ -19,7 +19,7 @@ const handleUserInput = function(key) {
 
   // exit game via ctrl-c
   if (key === '\u0003') {
-    connection.disconnect();
+    //connection.disconnect();
     process.exit();
   }
   // move snake
