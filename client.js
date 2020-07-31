@@ -11,8 +11,6 @@ const connect = function() {
   // interpret incoming data as text
   conn.setEncoding('utf8'); 
 
-  
-  // MENTOR
   conn.on('connect', () => {
     console.log('Welcome to the Snake Pit!');
     conn.write('Name: AXE');
