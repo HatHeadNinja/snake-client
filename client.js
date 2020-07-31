@@ -14,13 +14,12 @@ const connect = function() {
   
   // MENTOR
   conn.on('connect', () => {
-    client.log('Welcome to the Snake Pit!');
+    console.log('Welcome to the Snake Pit!');
+    conn.write('Name: AXE');
   });
 
   return conn;
-}
-
-;
+};
 
 //MENTOR: how do I export
 module.exports = {connect};
