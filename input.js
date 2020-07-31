@@ -16,15 +16,15 @@ const setupInput = function(conn) {
 }
 
 const handleUserInput = function(key) {
-  // \u0003 maps to ctrl+c input
-  // console.log(key);
+
+  // exit game via ctrl-c
   if (key === '\u0003') {
-    //conn.disconnect();
+    connection.disconnect();
     process.exit();
   }
+  // move snake
   if (key === 'w'){
     connection.write("Move: up");
-    //console.log("\033[F");
   }
   if (key === 'a'){
     connection.write("Move: left");
@@ -34,6 +34,16 @@ const handleUserInput = function(key) {
   }
   if (key === 'd'){
     connection.write("Move: right");
+  }
+  // send canned message
+  if (key === '1'){
+    connection.write("Say: OWNED!");
+  }
+  if (key === '2'){
+    connection.write("Say: hisss!");
+  }
+  if (key === '3'){
+    connection.write("Say: shedding!");
   }
   
 }
