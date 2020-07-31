@@ -11,8 +11,16 @@ const connect = function() {
   // interpret incoming data as text
   conn.setEncoding('utf8'); 
 
+  
+  // MENTOR
+  conn.on('connect', () => {
+    client.log('Welcome to the Snake Pit!');
+  });
+
   return conn;
 }
+
+;
 
 //MENTOR: how do I export
 module.exports = {connect};
