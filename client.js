@@ -19,5 +19,4 @@ const connect = function() {
   return conn;
 };
 
-//MENTOR: how do I export
 module.exports = {connect};
